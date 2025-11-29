@@ -1,0 +1,139 @@
+body
+{
+    font-family: "Poppins";
+}
+#landing-sect
+{
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),
+        url("../images/palawan.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+#navbar
+{
+    transition: all 0.2s ease;
+    background-color: transparent;
+    /* opacity: 0.9; */
+}
+#navbar.scrolled {
+    background: #1E1E1E;
+    /* background-color: #1E1E1E; */
+    /* opacity: 1;
+    backdrop-filter: blur(7px)!important;
+    -webkit-backdrop-filter: blur(7px)!important; */
+}
+
+/* #luzon
+{
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),
+        url("../images/luzon.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    transition: all 0.5s ease;
+}
+#visayas
+{
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),
+        url("../images/visayas.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    transition: all 0.5s ease;
+}
+#mindanao
+{
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),
+        url("../images/mindao.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    transition: all 0.5s ease;
+} */
+
+#luzon, #visayas, #mindanao {
+    /* CSS Variables */
+    --overlay-base: rgba(0, 0, 0, 0.40);
+    --overlay-hover: rgba(0, 0, 0, 0.45);
+    --current-overlay: var(--overlay-base);
+
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    z-index: 1;
+
+    background-image: 
+        linear-gradient(var(--current-overlay), var(--current-overlay)),
+        var(--card-image);
+}
+
+#luzon::before, #visayas::before, #mindanao::before {
+    content: ""; /* CRITICAL: Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+    transition: transform 0.5s ease;
+    transform: scale(1.0); /* Start scale at 1.0 */
+    
+    background-size: cover;
+    background-position: center;
+
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),
+        var(--card-image);
+}
+
+#luzon:hover::before, #visayas:hover::before, #mindanao:hover::before {
+
+    transform: scale(1.15); 
+}
+
+
+#description
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#culture
+{
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),
+        url("../images/festivals.png");
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+}
+
+@media (max-width: 1024px) {
+    #timeline-horizontal
+    {
+        opacity: 0;
+    }
+    #luzon, #visayas, #mindanao
+    {
+        height: 35vh
+    }
+
+}
+
+@media (max-width: 1023px) {
+  #timeline-vertical { display: block; }
+  #timeline-horizontal { display: none; }
+}
+
+@media (min-width: 1024px) {
+  #timeline-vertical{ display: none; }
+  #timeline-horizontal { display: block; }
+}

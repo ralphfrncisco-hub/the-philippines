@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class = "scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Philippines</title>
+
+    <!-- Tailwind CSS CDN LINK -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Icons CDN LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel = "stylesheet" href = 'assets/css/index.css'>
+    <link rel = "stylesheet" href = 'assets/css/fonts.css'>
+
+
+    <link rel="icon" type="image/x-icon" href="assets/images/philippines.png">
+</head>
+<body id = "home" class = "bg-[#121212]">
+    <header id = "navbar" class = "fixed w-full top-0 z-2">
+        <div class="container mx-auto px-3 w-full">
+            <nav class="flex justify-between items-center py-3 md:py-6 text-white">
+                <div class="flex">
+                    <a href="#home" class="flex items-center gap-2">
+                        <img src="assets/images/philippines.png" class="w-8 h-8">
+                        <h3 class="text-sm" id="name-header">PH</h3>
+                    </a>
+                </div>
+                <ul class="hidden md:flex space-x-13 text-sm lg:space-x-20 lg:text-md ml-5">
+                    <li>
+                        <a href="#home" class = "pb-2 border-b-2 border-transparent hover:border-white transition-all duration-100">Home</a>
+                    </li>
+
+                    <li class = "relative group">
+                        <a href="#Islands" class = "pb-2 transition-all duration-200 relative">Islands &nbsp;<i class="fa-solid fa-chevron-down relative"></i></a>
+                        
+                        <ul class="absolute left-0 mt-3 hidden w-26 bg-white text-gray-800 rounded-sm shadow-lg group-hover:block">
+                            <li>
+                                <a href="#luzon" class="block px-4 py-2 hover:bg-gray-100">Luzon</a>
+                            </li>
+                            <li>
+                                <a href="#visayas" class="block px-4 py-2 hover:bg-gray-100">Visayas</a>
+                            </li>
+                            <li>
+                                <a href="#mindanao" class="block px-4 py-2 hover:bg-gray-100">Mindanao</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#spots" class = "pb-2 border-b-2 border-transparent hover:border-white transition-all duration-100">Spots</a>
+                    </li>  
+                    <li>
+                        <a href="#cultures" class = "pb-2 border-b-2 border-transparent hover:border-white transition-all duration-100">Culture & Heritage</a>
+                    </li> 
+                    <li>
+                        <a href="#history" class = "pb-2 border-b-2 border-transparent hover:border-white transition-all duration-100">History</a>
+                    </li>   
+                </ul>
+
+                <div class = "flex items-center md:hidden">
+                    <button class = "p-2" id = "menuToggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id = "mobile-menu" class = "fixed inset-0 bg-[#1E1E1E] z-50 transform translate-x-full transition-transform duration-300 md:hidden">
+        <div class="container mx-auto px-4 h-full flex flex-col">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex">
+                    <a href="#home" class="flex items-center gap-2">
+                        <img src="assets/images/philippines.png" class="w-8 h-8">
+                        <h3 class="text-sm text-white" id="name-header">PH</h3>
+                    </a>
+                </div>
+                <button id="closeMenu" class="p-2">
+                    <i class="fa-solid fa-square-xmark text-gray-600 dark:text-gray-400"></i>
+                </button>
+            </div>
+        
+            <ul class="flex-1 flex flex-col justify-center items-center space-y-8">
+                <li>
+                    <a href="#home" class="text-2xl text-white">Home</a>
+                </li>
+                <li>
+                    <a href="#Islands" class = "text-2xl text-white">Islands</a>
+                </li>
+                    <a href="#spots" class="text-2xl text-white">Spots</a>
+                </li>
+                <li>
+                    <a href="#cultures" class="text-2xl text-white">Culture & Heritage</a>
+                </li>
+                <li>
+                    <a href="#history" class="text-2xl text-white">History</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class = "w-full flex" id = "landing-sect">
+        <div class = "container flex flex-col mx-auto px-4 md:px-0 items-start justify-center text-white">
+            <p class = "text-sm lg:text-xl font-normal">
+                Welcome to
+            </p>
+            <h1 class = "text-[35px] lg:text-7xl font-bold">
+                The Philippines
+            </h1>
+            <p class = "ml-1 md:ml-3 mb-8">The <span class = "text-[#3562B9]">Pearl</span> <span class = "text-[#FED216]">in the</span> <span class = "text-[#CD1127]">East</span></p>
+            <p class = "ml-1 md:ml-3 text-xs lg:text-md font-light mb-9">
+                Discover breathtaking islands, vibrant culture, <br>and warm smiles — a paradise waiting to be explored.
+            </p>
+            <a class = "ml-1 md:ml-3 text-xs md:text-lg px-3 md:px-4 py-3 bg-[#1B1B1B] rounded-sm hover:cursor-pointer">
+                Explore Now  &nbsp;<i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+    <section class = "w-full h-full p-6 xl:p-24 pb-28 flex bg-white" id = "Islands">
+        <div class = "container flex flex-col mx-auto items-center py-5 px-1 md:px-7 text-black">
+            <h1 class = "text-4xl font-bold text-[#232323] mb-3">Three Main Island Groups</h1>
+            <p class = "text-[7px] md:text-sm text-gray-800 font-normal mb-8 md:mb-16 text-justify">
+                The Philippines is an archipelago defined by its three great geographical divisions: Luzon to the north, Visayas at the center, and Mindanao in the south. 
+                Each group is an expansive world unto itself, offering vastly different experiences—from the metropolitan bustle and mountain retreats of Luzon to the historical islands 
+                and world-class beaches of Visayas, and the rich indigenous cultures and emerging adventure sports of Mindanao. Dividing your journey by these three pillars of the Philippines 
+                ensures you explore the full breadth of the nation's stunning geography and cultural diversity.
+            </p>
+
+            <div class = "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 cols-3 gap-8 md:gap-4 2xl:gap-10" id = "main-islands">
+                <div class = "p-0 md:p-5 w-60 md:w-57 lg:w-80 bg-[#121212] flex items-center justify-center text-white rounded-sm" style="--card-image: url('../images/luzon.jpg');" id = "luzon">
+                    <h2 class = "text-xl font-bold">Luzon</h2>
+                </div>
+                <div class = "p-0 md:p-5 w-60 md:w-57 lg:w-80 bg-[#121212] flex items-center justify-center text-white rounded-sm" style="--card-image: url('../images/visayas.jpg');" id = "visayas">
+                    <h2 class = "text-xl font-bold">Visayas</h2>
+                </div>
+                <div class = "p-0 md:p-5 w-60 md:w-57 lg:w-80 bg-[#121212] flex items-center justify-center text-white rounded-sm" style="--card-image: url('../images/mindao.jpg');" id = "mindanao">
+                    <h2 class = "text-xl font-bold">Mindanao</h2>    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class = "w-full h-full p-7 lg:p-20 pt-10 pb-26 bg-[#121212]" id = "spots">
+        <div class = "container grid grid-cols-1 md:grid-cols-2 mx-auto items-center py-5 text-white" id = "pristine">
+            <div class = "px-2 lg:px-7 pl-2 lg:pl-12 order-2 md:order-1">
+                <h1 class = "text-2xl xl:text-4xl font-bold mb-5">Discover <br>the Pristine Paradises <br>in the East</h1>
+
+                <p class = "text-xs xl:text-sm mb-15">
+                    Dive into an archipelago of over 7,600 islands where turquoise waters meet powder-soft sands. Beyond the famous beaches, 
+                    you'll find centuries of rich, complex history and adrenaline-pumping natural wonders. <br><br> Your journey to the heart of Southeast Asia starts now.
+                </p>
+
+                <a class = "px-4 py-3 bg-[#1B1B1B] rounded-sm hover:cursor-pointer">
+                    See More &nbsp;<i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class = "flex items-center justify-center order-1 md:order-2 mb-5 md:mb-0" id = "cultures">
+                <img src = "assets/images/white-beach.png" class = "w-150 h-60 mb-2 md:h-60 md:w-150 lg:w-170 lg:h-100 rounded-xl">
+            </div>
+            
+        </div>
+    </section>
+
+    <section class = "w-full h-full pt-26 pb-26" id = "culture">
+        <div class = "container flex flex-col mx-auto items-start justify-end h-full px-7 text-white">
+            <h1 class = "text-4xl font-bold mb-3">Learn more about our Culture</h1>
+            <p class = "text-sm text-white mb-10">Vibrant traditions that define the <span class = "text-[#2EA0F3]">Fil</span><span class = "text-[#FED216]">ip</span><span class = "text-[#FC1919]">ino</span> spirit</p>
+            
+            <a class = "px-4 py-3 bg-[#1B1B1B] rounded-sm hover:cursor-pointer">
+                Our Festivals &nbsp;<i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <section class = "w-full h-full pt-20 md:pt-34 pb-45 bg-white" id = "history">
+        <div class = "container flex flex-col mx-auto items-center px-7 text-black">
+            <h1 class = "text-[28px] md:text-4xl font-bold mb-3 text-center">Travel back in time to our History</h1>
+
+            <p class = "text-[9pt] md:text-sm text-gray-800 font-normal mb-20 md:mb-26 text-center">Uncover the stories that defined the Pearl of the Orient's path to the present day.</p>
+
+            <!-- <div class = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 cols-3 gap-8 2xl:gap-10">
+                <div class = "p-5 w-80 w-90 bg-[#121212] flex items-center justify-center text-center text-white rounded-sm" style="--card-image: url('../images/spanish-colonial-period.jpg');" id = "luzon">
+                    <h2 class = "text-xl font-bold">Spanish Colonial Period <br><br>(1521 - 1898)</h2>
+                </div>
+                <div class = "p-5 w-80 w-90 bg-[#121212] flex items-center justify-center text-center text-white rounded-sm" style="--card-image: url('../images/american-colonial-period.jpg');" id = "visayas">
+                    <h2 class = "text-xl font-bold">American and Japanese Occupation <br><br>(1898 - 1946)</h2>
+                </div>
+                <div class = "p-5 w-80 w-90 bg-[#121212] flex items-center justify-center text-center text-white rounded-sm" style="--card-image: url('../images/independence.jpg');" id = "mindanao">
+                    <h2 class = "text-xl font-bold">Post-Independence <br>and<br> Modern Era <br><br>(1946 - Present Day)</h2>    
+                </div>
+                
+            </div> -->
+
+            <!-- <ul class="items-center sm:flex px-10">
+                <li class="relative mb-3 sm:mb-0">
+                    <div class="flex items-center">
+                        <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                            <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                            </svg>
+                        </div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <h3 class="text-lg font-semibold text-black mb-3">Flowbite Library v1.0.0</h3>
+                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 2, 2021</time>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+                    </div>
+                </li>
+                <li class="relative mb-3 sm:mb-0">
+                    <div class="flex items-center">
+                        <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                            <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                            </svg>
+                        </div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <h3 class="text-lg font-semibold text-black mb-3">Flowbite Library v1.2.0</h3>
+                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 23, 2021</time>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+                    </div>
+                </li>
+                <li class="relative mb-3 sm:mb-0">
+                    <div class="flex items-center">
+                        <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                            <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                            </svg>
+                        </div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <h3 class="text-lg font-semibold text-black mb-3">Flowbite Library v1.3.0</h3>
+                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on January 5, 2022</time>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+                    </div>
+                </li>
+            </ul> -->
+            
+            <div id = "timeline-horizontal">
+                <ol class="relative flex gap-8 before:absolute before:-mt-px before:h-0.5 before:w-full before:rounded-full before:bg-gray-200">
+                    <li class="relative -mt-1.5">
+                        <span class="block size-3 rounded-full bg-blue-600"></span>
+
+                        <div class="mt-4">
+                            <time class="text-xs/none font-medium text-gray-700">1521 - 1898</time>
+
+                            <h3 class="text-lg font-bold text-gray-900">Spanish Colonial Period</h3>
+
+                            <!-- <p class="mt-0.5 text-sm text-gray-700">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga officiis tempora ipsum
+                                adipisci tenetur sunt quae exercitationem sed pariatur porro!
+                            </p> -->
+                            <img src = "assets/images/spanish-colonial-period.jpg" class = "w-200 mt-5 aspect-video rounded-md">
+                        </div>
+                    </li>
+
+                    <li class="relative -mt-1.5">
+                        <span class="block size-3 rounded-full bg-blue-600"></span>
+
+                        <div class="mt-4">
+                            <time class="text-xs/none font-medium text-gray-700">1898 - 1946</time>
+
+                            <h3 class="text-lg font-bold text-gray-900">American and Japanese Occupation</h3>
+
+                            <img src = "assets/images/american-colonial-period.jpg"  class = "w-200 mt-5 aspect-video rounded-md">
+                        </div>
+                    </li>
+
+                    <li class="relative -mt-1.5">
+                        <span class="block size-3 rounded-full bg-blue-600"></span>
+
+                        <div class="mt-4">
+                            <time class="text-xs/none font-medium text-gray-700">1946 - Present Day</time>
+
+                            <h3 class="text-lg font-bold text-gray-900">Post Independence and Modern Era</h3>
+
+                            <img src = "assets/images/dipendi.jpg"  class = "w-200 aspect-video mt-5 rounded-md">
+                        </div>
+                    </li>
+                    
+                </ol>
+            </div>
+            
+            <div id = "timeline-vertical">
+                <ol class="relative space-y-15 before:absolute before:-ml-px before:h-full before:w-0.5 before:rounded-full before:bg-gray-200">
+                    <li class="relative -ms-1.5 flex items-start gap-4">
+                        <span class="size-3 shrink-0 rounded-full bg-blue-600"></span>
+
+                        <div class="-mt-2">
+                            <time class="text-xs/none font-medium text-gray-700">1521 - 1898</time>
+
+                            <h3 class="text-lg font-bold text-gray-900">Spanish Colonial Period</h3>
+                            <img src = "assets/images/spanish-colonial-period.jpg" class = "w-200 mt-5 aspect-video rounded-md">
+
+                        </div>
+                    </li>
+
+                    <li class="relative -ms-1.5 flex items-start gap-4">
+                        <span class="size-3 shrink-0 rounded-full bg-blue-600"></span>
+
+                        <div class="-mt-2">
+                            <time class="text-xs/none font-medium text-gray-700">1898 - 1946</time>
+
+                            <h3 class="text-lg font-bold text-gray-900">American and Japanese Occupation</h3>
+
+                            <img src = "assets/images/american-colonial-period.jpg"  class = "w-200 mt-5 aspect-video rounded-md">
+
+                        </div>
+                    </li>
+
+                    <li class="relative -ms-1.5 flex items-start gap-4">
+                        <span class="size-3 shrink-0 rounded-full bg-blue-600"></span>
+
+                        <div class="-mt-2">
+                            <time class="text-xs/none font-medium text-gray-700">1946 - Present Day</time>
+
+                            <h3 class="text-lg font-bold text-gray-900">Post Independence and Modern Era</h3>
+
+                            <img src = "assets/images/dipendi.jpg"  class = "w-200 aspect-video mt-5 rounded-md">
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <footer id = "contact" class = "pt-29 pb-20 px-4">
+        <div class = "container mx-auto pt-5 text-white">
+            <div class = "grid grid-cols-1 md:grid-cols-3 mt-5">
+                <div class = "flex items-center gap-3 mt-[-50px] mb-10">
+                    <img src = "assets/images/philippines.png" class = "w-10 h-10">
+                    <h1 class = "text-3xl font-bold">The Philippines</h1>
+                </div>
+                <div class = "px-2 mb-10">
+                    <h3 class = "text-lg font-bold mb-4">About this website</h3>
+                    <p class = "font-light text-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Maecenas consectetur odio tortor, nec laoreet arcu elementum at.
+                        Vestibulum tincidunt pretium turpis. Etiam elit magna, tempus a nulla in, 
+                        convallis gravida massa. Nullam at odio a arcu fringilla malesuada quis vel lorem. 
+                        Curabitur ut tellus et leo pulvinar commodo.
+                    </p>
+                </div>
+
+                <div class = "px-1 md:px-5">
+                    <h3 class = "text-lg font-bold mb-3">Send a Feedback</h3>
+                    <textarea class = "p-2 bg-white rounded-md w-full text-sm text-black" rows="5" placeholder="e.g Hello World!"></textarea>
+                </div>
+            </div>
+            <p class = "ml-5 mt-[-50px] font-thin">© All rights reserved</p>
+        </div> 
+    </footer>
+
+
+    <script src = "assets/script/script.js"></script>
+</body>
+</html>
